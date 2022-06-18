@@ -3,7 +3,7 @@ BasedOnStyle: Chromium
 BreakBeforeBraces: Attach
 IndentWidth: 4
 
-Language: C
+
 DerivePointerAlignment: false
 PointerAlignment: Left
 
