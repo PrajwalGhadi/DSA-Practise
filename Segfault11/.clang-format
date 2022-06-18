@@ -1,0 +1,10 @@
+BasedOnStyle: Chromium
+
+BreakBeforeBraces: Attach
+IndentWidth: 2
+
+Language: Cpp
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+ForEachMacros: ['REP', 'REPL', 'REPD']
