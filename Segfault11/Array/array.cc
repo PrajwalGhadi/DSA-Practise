@@ -1,7 +1,7 @@
 /**
-    Generic Array ADT
-    @file array.cc
-    @author Rohit Gautam
+  Generic Array ADT
+  @file array.cc
+  @author Rohit Gautam
 */
 
 #include <cassert>
@@ -10,7 +10,7 @@
 #include <sstream>
 
 enum arithmatic_operator { add, sub, mul, truediv };
-auto swap = [](int& a, int& b) {
+void swap(int& a, int& b) {
   int t;
   t = a, a = b, b = t;
 };
@@ -52,7 +52,7 @@ struct Array {
     @param ar_ops arithmatic operator
     @return new resulting container with same type
   */
-  Array<T> do_arithematic(const Array<T>& rhs, arithmatic_operator ar_ops) const {
+  Array<T> do_arithmatic(const Array<T>& rhs, arithmatic_operator ar_ops) const {
     assert(size_ == rhs.size());
     Array<T> result(size_);
     for (int i = 0; i < size_; i++) {
@@ -161,22 +161,22 @@ bool Array<T>::operator==(const Array<T>& rhs) const {
 
 template <typename T>
 Array<T> Array<T>::operator+(const Array<T>& rhs) const {
-  return do_arithematic(rhs, add);
+  return do_arithmatic(rhs, add);
 }
 
 template <typename T>
 Array<T> Array<T>::operator-(const Array<T>& rhs) const {
-  return do_arithematic(rhs, sub);
+  return do_arithmatic(rhs, sub);
 }
 
 template <typename T>
 Array<T> Array<T>::operator*(const Array<T>& rhs) const {
-  return do_arithematic(rhs, mul);
+  return do_arithmatic(rhs, mul);
 }
 
 template <typename T>
 Array<T> Array<T>::operator/(const Array<T>& rhs) const {
-  return do_arithematic(rhs, truediv);
+  return do_arithmatic(rhs, truediv);
 }
 
 template <typename T>
