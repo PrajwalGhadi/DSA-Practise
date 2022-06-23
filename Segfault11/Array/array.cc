@@ -123,15 +123,15 @@ size_t Array<T>::index(T element) const {
 
 template <typename T>
 void Array<T>::sort(bool reverse) {
-  for (int i = 0; i < size_; i++) {
-    for (int j = i; j < size_; j++) {
+  for (int i = 1; i < size_; i++) {
+    for (int j = 0; j < size_ - i; j++) {
       if (reverse) {
-        if (at(i) < at(j)) {
-          swap(at(i), at(j));
+        if (at(j) < at(j + 1)) {
+          swap(at(j), at(j + 1));
         }
       } else {
-        if (at(i) > at(j)) {
-          swap(at(i), at(j));
+        if (at(j) > at(j + 1)) {
+          swap(at(j), at(j + 1));
         }
       }
     }
@@ -207,7 +207,8 @@ int main() {
   array.at(5) = 3;
 
   std::cout << array << '\n';
-  std::cout << array2 << '\n';
+  array.sort(true);
+  std::cout << array << '\n';
 
   std::cout << (array + array2) << '\n';
 
