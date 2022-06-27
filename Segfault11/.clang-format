@@ -7,5 +7,6 @@ ColumnLimit: 120
 Language: Cpp
 DerivePointerAlignment: false
 PointerAlignment: Left
+AllowShortBlocksOnASingleLine: true
 
 ForEachMacros: ['REP', 'REPL', 'REPD']
