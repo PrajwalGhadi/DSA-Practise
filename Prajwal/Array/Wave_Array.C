@@ -47,13 +47,13 @@ void wave (int array[], int array_size){
     for (int i = 1; i < array_size; i = i+2){
         
         // Condition to check elements current index is more than previous index 
-        // If it is then SWAP
+        // If Condition Statisfy then SWAP
         if (array[i - 1] < array[i]){
             swap(&array[i-1], &array[i]);
         }
 
-        // Condition to check whether current index is less greater than furthermost index or not
-        // If it is then SWAP 
+        // Condition to check whether current index is greater than furthermost index or not
+        // If Condition Statisfy then SWAP 
         if(array[i] > array[i + 1] && i <= array_size - 2){
             swap(&array[i], &array[i + 1]);
         }
