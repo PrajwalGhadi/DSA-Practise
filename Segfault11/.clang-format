@@ -2,7 +2,7 @@ BasedOnStyle: Chromium
 
 BreakBeforeBraces: Attach
 IndentWidth: 2
-ColumnLimit: 120
+ColumnLimit: 79
 
 Language: Cpp
 DerivePointerAlignment: false
