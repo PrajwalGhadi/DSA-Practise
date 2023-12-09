@@ -1,5 +1,5 @@
 #include <iostream>
-
+// Start
 using namespace std;
 
 bool power_of_two(const int n) {
